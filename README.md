@@ -2,13 +2,13 @@
 This project presents an AI-enabled system designed to predict water well levels and manage water resources efficiently. It addresses the challenges of declining groundwater levels due to climate change and overexploitation by leveraging advanced machine learning and natural language processing (NLP) techniques. The system also forecasts water quality index (WQI) and classifies water quality.
 
  **🚀 Features**
-✅ Predicts water well levels using Decision Tree and Random Forest algorithms
-✅ Classifies water-bearing zones based on key parameters
-✅ Clusters regions based on water availability using K-Means
-✅ Sentiment analysis of user feedback through NLP
-✅ Interactive data visualizations (graphs and charts)
-✅ User-friendly interface with login and registration
-✅ High prediction accuracy up to 97%
+* ✅ Predicts water well levels using Decision Tree and Random Forest algorithms
+* ✅ Classifies water-bearing zones based on key parameters
+* ✅ Clusters regions based on water availability using K-Means
+* ✅ Sentiment analysis of user feedback through NLP
+* ✅ Interactive data visualizations (graphs and charts)
+* ✅ User-friendly interface with login and registration
+* ✅ High prediction accuracy up to 97%
 
  **📊 Modules**
 * User Signup/Login — secure access
