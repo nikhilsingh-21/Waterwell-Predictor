@@ -1,0 +1,160 @@
+{% load static %}
+<html>
+<head>
+<title>AI-Enabled Water Well Predictor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+ <script LANGUAGE="Javascript" >
+function validate(){
+	var x=document.forms["f1"]["t3"].value;
+	var y=document.forms["f1"]["t4"].value;
+	var a=document.forms["f1"]["t5"].value;
+	var b=document.forms["f1"]["t6"].value;
+	var c=document.forms["f1"]["t7"].value;
+	var a1=document.forms["f1"]["t8"].value;
+	var a2=document.forms["f1"]["t9"].value;
+	var a3=document.forms["f1"]["t10"].value;
+	var a4=document.forms["f1"]["t11"].value;
+	var a5=document.forms["f1"]["t12"].value;
+	var a6=document.forms["f1"]["t13"].value;
+	var a7=document.forms["f1"]["t14"].value;
+	
+	
+	if(x == null || x==""){
+		window.alert("All fields must be enter");
+		document.f1.t3.focus();
+		return false;
+	}
+	if(y == null || y==""){
+		window.alert("All fields must be enter");
+		document.f1.t4.focus();
+		return false;
+	}
+	if(a == null || a==""){
+		window.alert("All fields must be enter");
+		document.f1.t5.focus();
+		return false;
+	}
+	if(b == null || b==""){
+		window.alert("All fields must be enter");
+		document.f1.t6.focus();
+		return false;
+	}
+	if(c == null || c==""){
+		window.alert("All fields must be enter");
+		document.f1.t7.focus();
+		return false;
+	}
+	if(a1 == null || a1==""){
+		window.alert("All fields must be enter");
+		document.f1.t8.focus();
+		return false;
+	}
+	if(a2 == null || a2==""){
+		window.alert("All fields must be enter");
+		document.f1.t9.focus();
+		return false;
+	}
+	if(a3 == null || a3==""){
+		window.alert("All fields must be enter");
+		document.f1.t10.focus();
+		return false;
+	}
+	if(a4 == null || a4==""){
+		window.alert("All fields must be enter");
+		document.f1.t11.focus();
+		return false;
+	}
+	if(a5 == null || a5==""){
+		window.alert("All fields must be enter");
+		document.f1.t12.focus();
+		return false;
+	}
+	if(a6 == null || a6==""){
+		window.alert("All fields must be enter");
+		document.f1.t13.focus();
+		return false;
+	}
+	if(a7 == null || a7==""){
+		window.alert("All fields must be enter");
+		document.f1.t14.focus();
+		return false;
+	}
+	return true;
+}
+		
+	
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow"><font size="4" color="black">AI-Enabled Water Well Predictor</font></center></font>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+		<li><a href="{% url 'Visualization' %}"><font size="3" color="black">Visualization</font></a></font></li>
+	  <li><a href="{% url 'Clustering' %}"><font size="3" color="black">Kmeans Clustering</font></a></font></li>
+	   <li><a href="{% url 'TrainModels' %}"><font size="3" color="black">Train Models</font></a></font></li>
+	   <li><a href="{% url 'CurrentWater' %}"><font size="3" color="black">Current Water Level</font></a></font></li>	  
+	    <li><a href="{% url 'WaterBearing' %}"><font size="3" color="black">Water Bearing Zone</font></a></font></li>	
+		 <li><a href="{% url 'Feedback' %}"><font size="3" color="black">Feedback</font></a></font></li>	
+	   <li><a href="{% url 'index' %}"><font size="3" color="black">Logout</font></a></font></li>		
+		</center></ul>
+<br class="clearfix" />
+				</div>
+			
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>	
+			<center>
+<form name="f1" method="post" action={% url 'WaterBearingAction' %} OnSubmit="return validate()">
+	{% csrf_token %}<br/>
+   <h3><b>AI-Enabled Water Well Predictor</b></h3>
+   
+	<font size="" color="black"><center>{{ data|safe }}</center></font>
+						
+						<table align="center" >
+
+						{{ data1|safe }}
+
+			 <tr><td><font size="" color="black">Recharge from rainfall During Monsoon Season</b></td><td><input type="text" name="t3" style="font-family: Comic Sans MS" size="25"/></td></tr>
+         
+		  
+		<tr><td><font size="" color="black">Recharge from other sources During Monsoon Season</b></td><td><input type="text" name="t4" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Recharge from rainfall During Non Monsoon Season</b></td><td><input type="text" name="t5" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Recharge from other sources During Non Monsoon Season</b></td><td><input type="text" name="t6" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Total Annual Ground Water Recharge</b></td><td><input type="text" name="t7" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Total Natural Discharges</b></td><td><input type="text" name="t8" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Annual Extractable Ground Water Resource</b></td><td><input type="text" name="t9" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Current Annual Ground Water Extraction For Irrigation</b></td><td><input type="text" name="t10" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Current Annual Ground Water Extraction For Domestic & Industrial Use</b></td><td><input type="text" name="t11" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Total Current Annual Ground Water Extraction</b></td><td><input type="text" name="t12" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Annual GW Allocation for Domestic Use as on 2025</b></td><td><input type="text" name="t13" style="font-family: Comic Sans MS" size="25"/></td></tr>
+
+		<tr><td><font size="" color="black">Net Ground Water Availability for future use</b></td><td><input type="text" name="t14" style="font-family: Comic Sans MS" size="25"/></td></tr>
+		 
+			<tr><td></td><td><input type="submit" value="Submit">
+			</td>
+			</table>
+			<br/><br/><br/><br/>
+				</div>	
+					
+				</div>
+				
+	</body>
+</html>

@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+<head>
+<title>AI-Enabled Water Well Predictor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow"><font size="4" color="black">AI-Enabled Water Well Predictor</font></center></font>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+		<li><a href="{% url 'Visualization' %}"><font size="3" color="black">Visualization</font></a></font></li>
+	  <li><a href="{% url 'Clustering' %}"><font size="3" color="black">Kmeans Clustering</font></a></font></li>
+	   <li><a href="{% url 'TrainModels' %}"><font size="3" color="black">Train Models</font></a></font></li>
+	   <li><a href="{% url 'CurrentWater' %}"><font size="3" color="black">Current Water Level</font></a></font></li>	  
+	    <li><a href="{% url 'WaterBearing' %}"><font size="3" color="black">Water Bearing Zone</font></a></font></li>	
+		 <li><a href="{% url 'Feedback' %}"><font size="3" color="black">Feedback</font></a></font></li>	
+	   <li><a href="{% url 'index' %}"><font size="3" color="black">Logout</font></a></font></li>		
+		</center></ul>
+		<br class="clearfix" />
+	</div>
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>
+	<br/>
+	<font size="" color="black"><center>{{ data|safe }}</center></font>
+
+	<p align="justify"><font size="3" style="font-family: Comic Sans MS" color="black">
+		Online Sentiment Analysis Systems
+
+</p>
+</body>
+</html>
